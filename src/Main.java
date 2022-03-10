@@ -1,4 +1,4 @@
-import java.util.Scanner;
+
 
 public class Main {
 
@@ -9,11 +9,12 @@ public class Main {
 
         menu.getWelcomeScreen("Welcome to Kailua Car Rental");
 
-        menu.getMainOptions(">1< Available cars", ">2< Customers", ">3< New rental", ">4< Active rentals");
+        do {
+            menu.getMainOptions(">1< Available cars", ">2< Customers", ">3< New rental",
+                    ">4< Active rentals");
 
-        menu.getSwitchMain();
-
-
+            menu.getSwitchMain();
+        } while (menu.scan.nextInt() != 0);
 
     }
 }
